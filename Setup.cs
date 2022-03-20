@@ -34,10 +34,6 @@ namespace TGpatch_Installer
             currentStep = Step.Intro;
             UpdateStep();
 
-            var t = Directory.GetCurrentDirectory();
-            var t2 = Directory.Exists("testFolder");
-            var t3 = Directory.GetDirectories(Directory.GetCurrentDirectory());
-
             if (!PatchInstaller.VerifyPatchFiles())
             {
                 MessageBox.Show("Patch folder could not be found. Make sure to extract all the files from archive or run the installer from archive itself.",
